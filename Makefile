@@ -11,7 +11,7 @@ package-install:
 	uv tool install dist/*.whl
 
 package-reinstall:
-	uv tool install dist/*.whl -force
+	uv tool install dist/*.whl -force-reinstall
 
 lint:
 	uv run ruff check
