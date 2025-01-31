@@ -10,3 +10,10 @@ build:
 package-install:
 	uv tool install dist/*.whl
 
+package-reinstall:
+	uv tool install dist/*.whl -force
+
+lint:
+	uv run ruff check
+
+
