@@ -18,10 +18,12 @@ def is_even():
             else:
                 if random_number % 2 == 0:
                     print("'no' is wrong answer ;(. Correct answer was 'yes'.", f"Let's try again, {name}!", sep='\n')
+                    cnt = 0
                     break
                 else:
                     print("'yes' is wrong answer ;(. Correct answer was 'no'.", f"Let's try again, {name}!", sep='\n')
+                    cnt = 0
                     break
             if cnt == 3:
                 print('Congratulations, ', name, '!', sep='')
-            flag = False
+                flag = False
