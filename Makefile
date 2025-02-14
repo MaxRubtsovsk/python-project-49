@@ -16,4 +16,5 @@ package-reinstall:
 lint:
 	uv run ruff check
 
-
+brain-gcd:
+	uv run brain-gcd
