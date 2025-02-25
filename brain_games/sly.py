@@ -6,25 +6,17 @@ def is_even():
     print('Hello, ', name, '!', sep='')
     print('Answer "yes" if the number is even, otherwise answer "no".')
     cnt = 0
-    flag = True
-    while flag == True:
-        while cnt < 3:
-            random_number = randint(-9999999999, 9999999999)
-            print('Question:', random_number)
-            answer = input()
-            if random_number % 2 == 0 and answer == 'yes' or random_number % 2 != 0 and answer == 'no':
-                print('Correct!')
-                cnt += 1
-            else:
-                if random_number % 2 == 0:
-                    print("'no' is wrong answer ;(. Correct answer was 'yes'.", f"Let's try again, {name}!", sep='\n')
-                    cnt = 0
-                    break
-                else:
-                    print("'yes' is wrong answer ;(. Correct answer was 'no'.", f"Let's try again, {name}!", sep='\n')
-                    cnt = 0
-                    break
-            #if cnt == 3:
-             #   print('Congratulations, ', name, '!', sep='')
-              #  flag = False
-        flag = False
+    while cnt < 3:
+        random_number = randint(-99, 99)
+        print('Question:', random_number)
+        answer = input('Your answer: ')
+        if (random_number % 2 == 0 and answer == 'yes') or (random_number % 2 != 0 and answer == 'no'):
+            print('Correct!')
+            cnt += 1
+        else:
+            # Определяем правильный ответ
+            correct_answer = 'yes' if random_number % 2 == 0 else 'no'
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"Let's try again, {name}!")
+            return
+    print('Congratulations,', name + '!')
