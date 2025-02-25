@@ -24,6 +24,7 @@ def is_even():
                     print("'yes' is wrong answer ;(. Correct answer was 'no'.", f"Let's try again, {name}!", sep='\n')
                     cnt = 0
                     break
-            if cnt == 3:
-                print('Congratulations, ', name, '!', sep='')
-                flag = False
+            #if cnt == 3:
+             #   print('Congratulations, ', name, '!', sep='')
+              #  flag = False
+        flag = False
