@@ -20,11 +20,12 @@ def is_even():
                     print("'no' is wrong answer ;(. Correct answer was 'yes'.", f"Let's try again, {name}!", sep='\n')
                     cnt = 0
                     break
+                    flag = False
                 else:
                     print("'yes' is wrong answer ;(. Correct answer was 'no'.", f"Let's try again, {name}!", sep='\n')
                     cnt = 0
                     break
-            #if cnt == 3:
-             #   print('Congratulations, ', name, '!', sep='')
-              #  flag = False
-        flag = False
+                    flag = False
+            if cnt == 3:
+               print('Congratulations, ', name, '!', sep='')
+               flag = False
